@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://w3id.org/security/suites/jws-2020/v1",
+    "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
+    {
+      "imx": "http://w3id.org/imx",
+      "schema": "https://schema.org/"
+    }
+  ],
+  "type": [
+    "VerifiableCredential",
+    "imx:ProviderCredential"
+  ],
+  "issuanceDate": "2026-03-31T01:30:35.440Z",
+  "credentialSubject": {
+    "id": "did:imx:showcase:hm26:entity:toshiba",
+    "schema:name": "Toshiba Corporation (IMX Demostrator)",
+    "gx:registrationNumber": {
+      "gx:countryCompanyNumber": "2010401044997",
+      "gx:companyNumberQualifier": "",
+      "gx:countryCode": "JP"
+    }
+  },
+  "issuer": "did:web:idyx-ti.japaneast.cloudapp.azure.com:local-notary",
+  "id": "https://idyx-ti.japaneast.cloudapp.azure.com/api/credentials/a8a338a1-45b1-490b-960b-71e3ffde2aea/legalRegistrationNumber/94aa0554-52c3-447a-9045-59d005920533",
+  "evidence": [
+    {
+      "gx:evidenceURL": "https://stg.gbiz-id.go.jp/oauth",
+      "gx:executionDate": "2026-03-31T01:30:35.440Z",
+      "gx:evidenceOf": "gx:countryCompanyNumber"
+    }
+  ],
+  "proof": {
+    "type": "JsonWebSignature2020",
+    "created": "2026-03-31T01:30:35.487+00:00",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:web:idyx-ti.japaneast.cloudapp.azure.com:local-notary#X509-JWK2020",
+    "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..J_2O2xzByx3WeWcZt5fco21QGNB1KIyy-1bIAqXY3AHghkvT8YvYHp5QM6zE14Ncc3WlyxcW8oDT_VEkFad0MGoQqer-YiEud1hSihRyXsNkkEs_m1UEOQNBeIUqG9e4fUTexDK8F_bADY4QkvbUgjtuX9CTjPV7QYwWokRZVUBIzDIrBK4H0D4CkqGJSBh28fiOlFBDHlIfjk83zPlZbCtJcuZrKeX8hNcyHI_kgQ2rAqirj6ZafFUi-17CkvW7J4jt6B841qVgk07sSkmJ9l2DOu6lUB9LDgmdc7EhwKCIyY794Kmk78Qgofua-jHVmKabQfaJvU8xlFUXr21J_w"
+  }
+}

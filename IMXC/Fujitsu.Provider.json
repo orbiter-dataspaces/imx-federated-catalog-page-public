@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://w3id.org/security/suites/jws-2020/v1",
+    "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
+    {
+      "imx": "http://w3id.org/imx",
+      "schema": "https://schema.org/"
+    }
+  ],
+  "type": [
+    "VerifiableCredential",
+    "imx:ProviderCredential"
+  ],
+  "issuanceDate": "2026-03-31T03:50:25.661Z",
+  "credentialSubject": {
+    "id": "did:imx:showcase:hm26:entity:fujitsu",
+    "schema:name": "Fujitsu",
+    "gx:registrationNumber": {
+      "gx:countryCompanyNumber": "1020001071491",
+      "gx:companyNumberQualifier": "",
+      "gx:countryCode": "JP"
+    }
+  },
+  "issuer": "did:web:idyx-ti.japaneast.cloudapp.azure.com:local-notary",
+  "id": "https://idyx-ti.japaneast.cloudapp.azure.com/api/credentials/7aa39574-5a24-4382-9b1e-33bbdf3c55d6/legalRegistrationNumber/b138e434-0662-4a3f-95ca-1479dd044e1e",
+  "evidence": [
+    {
+      "gx:evidenceURL": "https://stg.gbiz-id.go.jp/oauth",
+      "gx:executionDate": "2026-03-31T03:50:25.661Z",
+      "gx:evidenceOf": "gx:countryCompanyNumber"
+    }
+  ],
+  "proof": {
+    "type": "JsonWebSignature2020",
+    "created": "2026-03-31T03:50:25.711+00:00",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:web:idyx-ti.japaneast.cloudapp.azure.com:local-notary#X509-JWK2020",
+    "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..HUgcWMOiCqiULvUAk5R6GhXbNwuROBEOmvtEVE7Iq3SvhBcrQUukvRXcpJE5GcgMpYM3SPQLR-LDIN7VCDCeYqTs0bK6gKz18xtho9MS-Urob6kMV6K1zJcvW5IGNVe-9GwCoOqDVOYlTLrQDPyegjkew1Pb8bJne4etJywe-aKz4HkQYt70paD1raEb09EiF3xBDm7DANp6tMIEGTvd31j0HcWwW69rSB5hUPqYswgKY_zy8IyH4PAHGGhbxGDMJOdLGB_oGDDrKDT46EcvMMsBIBIsY59A0B4N0Z8DEeiOmL-BMuF0BxfcpzWzQ6BHOgogTK_GU9vzqBdHQLCLeQ"
+  }
+}

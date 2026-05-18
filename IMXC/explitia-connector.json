@@ -1,0 +1,33 @@
+{
+    "@context": [
+        "https://www.w3.org/ns/credentials/v2",
+        "https://w3id.org/gaia-x/development#",
+        {
+            "imx": "http://w3id.org/imx",
+            "schema": "https://schema.org/"
+        }
+    ],
+    "id": "https://trust.imx.explitia.com/.well-known/imx-connector.json",
+    "type": [
+        "VerifiableCredential",
+        "imx:ConnectorCredential"
+    ],
+    "issuer": "did:web:trust.imx.explitia.com",
+    "validFrom": "2026-04-16T09:28:17.911+00:00",
+    "validUntil": "2026-07-15T09:28:17.911+00:00",
+    "credentialSubject": {
+        "id": "did:imx:showcase:hm26:connector:ExplitiaEDC001",
+        "schema:name": "Explitia - EDC Connector 001",
+        "schema:description": "Explitia EDC Connector providing access to BasyX Assembly AAS and Portal",
+        "imx:operatedBy": "did:imx:showcase:hm26:entity:explitia",
+        "imx:supportedStandards": [
+            "imx:DSPStandard",
+            "imx:AASStandard"
+        ],
+        "imx:endPoint": "https://explitia-hm26-pl.prod-sovity.azure.sovity.io/api/v1/dspC",
+        "imx:endPointCountry": "PL",
+        "imx:supportedUseCases": [
+            "imx:BatteryPassportUseCase"
+        ]
+    }
+}

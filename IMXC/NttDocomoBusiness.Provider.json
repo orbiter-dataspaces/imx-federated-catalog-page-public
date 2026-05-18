@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://w3id.org/security/suites/jws-2020/v1",
+    "https://registry.lab.gaia-x.eu/development/api/trusted-shape-registry/v1/shapes/jsonld/trustframework#",
+    {
+      "imx": "http://w3id.org/imx",
+      "schema": "https://schema.org/"
+    }
+  ],
+  "type": [
+    "VerifiableCredential",
+    "imx:ProviderCredential"
+  ],
+  "issuanceDate": "2026-03-31T01:28:36.111Z",
+  "credentialSubject": {
+    "id": "did:imx:showcase:hm26:entity:nttdocomobusiness",
+    "schema:name": "NTT DOCOMO BUSINESS",
+    "gx:registrationNumber": {
+      "gx:countryCompanyNumber": "7010001064648",
+      "gx:companyNumberQualifier": "",
+      "gx:countryCode": "JP"
+    }
+  },
+  "issuer": "did:web:idyx-ti.japaneast.cloudapp.azure.com:local-notary",
+  "id": "https://idyx-ti.japaneast.cloudapp.azure.com/api/credentials/80339318-97d5-4d2b-8383-4f3e14f9b102/legalRegistrationNumber/30a247b1-549b-457c-86fe-d7fa1b49a0a7",
+  "evidence": [
+    {
+      "gx:evidenceURL": "https://stg.gbiz-id.go.jp/oauth",
+      "gx:executionDate": "2026-03-31T01:28:36.111Z",
+      "gx:evidenceOf": "gx:countryCompanyNumber"
+    }
+  ],
+  "proof": {
+    "type": "JsonWebSignature2020",
+    "created": "2026-03-31T01:28:36.180+00:00",
+    "proofPurpose": "assertionMethod",
+    "verificationMethod": "did:web:idyx-ti.japaneast.cloudapp.azure.com:local-notary#X509-JWK2020",
+    "jws": "eyJhbGciOiJQUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..hqczD_L59L4HVJed99FupNQbngx7nGs9GLP9FB-QS0qnXmPV35rcqhqkQQslBz7CdFwqXZQSQWL5A60PuHa0tDx8ZyaUhnqTMhQS54AMlvKvp8shWLSlpb2T-6tcS9UAv0Bd5flxCaOQafggayrfhhsmh3EzstiQeUlWi5Zk6XtTk_rNTH6B7Hl3zWY_qkf4mvWJmlFEJpkdWFDF_bImhMvzZ6tSf8ZoOZKRrnHcn8aaVJP-itoQQJ_8RHlhWGB6El6vH7YwMpJ58IdkAZUhUEy8DB_49nqL6scEJ_SnijFF1f9ei4-7oHsg_F1FQiVQRiGuoPlsDuUy3UzSjB-bpQ"
+  }
+}

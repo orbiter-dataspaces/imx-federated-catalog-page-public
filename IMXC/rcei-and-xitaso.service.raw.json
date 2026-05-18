@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://w3id.org/gaia-x/development#",
+    {
+      "imx": "http://w3id.org/imx",
+      "schema": "https://schema.org/"
+    }
+  ],
+  "id": "did:imx:showcase:hm26:entity:rcei-and-xitaso:vc:ServiceCredential:001",
+  "type": [
+    "VerifiableCredential",
+    "imx:ServiceCredential"
+  ],
+  "issuer": "did:imx:showcase:hm26:entity:rcei-and-xitaso",
+  "validFrom": "2026-04-08T13:39:17.400+00:00",
+  "credentialSubject": {
+    "id": "did:imx:showcase:hm26:rcei-and-xitaso:dpp-showcase",
+    "type": "imx:Service",
+    "schema:name": "Digifab Service",
+    "schema:description": "RCEI/LNI DPP Showcase - AAS/SM/CD Repository",
+    "imx:operatedBy": "did:imx:showcase:hm26:entity:rcei-and-xitaso",
+    "imx:supportedStandards": [
+      "imx:AASStandard"
+    ],
+    "imx:endPoint": "https://api.dpp.demo.digifabqg.ca/repo",
+    "imx:supportedUseCases": ""
+  }
+}

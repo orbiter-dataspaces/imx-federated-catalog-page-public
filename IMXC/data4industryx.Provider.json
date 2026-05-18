@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://w3id.org/gaia-x/development#",
+    {
+      "imx": "http://w3id.org/imx",
+      "schema": "https://schema.org/"
+    }
+  ],
+  "id": "did:imx:showcase:hm26:entity:data4industryx:ProviderCredential:001",
+  "type": [
+    "VerifiableCredential",
+    "imx:ProviderCredential"
+  ],
+  "issuer": "did:imx:showcase:hm26:entity:data4industryx",
+  "validFrom": "2026-03-10T10:26:07.093+00:00",
+  "validUntil": "2026-09-09T10:26:07.094+00:00",
+  "credentialSubject": {
+    "id": "did:imx:showcase:hm26:entity:data4industryx",
+    "type": "imx:Participant",
+    "schema:name": "Data4IndustryX",
+    "gx:registrationNumber": {
+      "type": "gx:CompanyRegistration",
+      "gx:countryCompanyNumber": "FR67945141893",
+      "gx:companyNumberQualifier": "FRCompanyHouse",
+      "gx:countryCode": "FR"
+    }
+  }
+}

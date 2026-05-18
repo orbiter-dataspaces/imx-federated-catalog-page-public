@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://w3id.org/gaia-x/development#",
+    {
+      "imx": "http://w3id.org/imx",
+      "schema": "https://schema.org/"
+    }
+  ],
+  "id": "did:imx:showcase:hm26:entity:rcei-and-xitaso:vc:ProviderCredential:001",
+  "type": [
+    "VerifiableCredential",
+    "imx:ProviderCredential"
+  ],
+  "issuer": "did:imx:showcase:hm26:entity:rcei-and-xitaso",
+  "validFrom": "2026-04-08T13:39:17.399+00:00",
+  "credentialSubject": {
+    "id": "did:imx:showcase:hm26:entity:rcei-and-xitaso",
+    "type": "imx:Participant",
+    "schema:name": "RCEI and XITASO",
+    "gx:registrationNumber": {
+      "type": "gx:CompanyRegistration",
+      "gx:countryCompanyNumber": "CA1234567890",
+      "gx:companyNumberQualifier": "CompanyRegistryCA",
+      "gx:countryCode": "CA"
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+    "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1"
+    ],
+    "type": [ 
+        "VerifiableCredential",
+        "ServiceStandardComplianceCredential"
+    ],
+    "issuanceDate": "2025-11-14T11:00:00Z",
+    "validFrom": "2025-11-14T11:00:00Z", 
+    "validUntil": "2025-12-14T11:00:00Z",
+    "credentialSubject": {
+        "@context":["https://tems-trial.es/.well-known/sqsCredentialSubjectContext.jsonld"],
+        "id": "did:web:claimant-service.es",
+        "ex:controllerName": "Claimant Company",
+        "ex:operatedBy": "did:web:claimant-company.es",
+        "ex:serviceName": "Claimant Service",
+        "ex:endpoint": "http:\\claimant-service.es/endpoint",
+        "ex:adheresToStandard": [
+            {"ex:standardsName": "DSP",
+              "ex:testBedResults": "https://claimant-service.es/.well-known/tests-results-DSP"}, 
+            { "ex:standardsName": "AAS",
+              "ex:testBedResults": "https://claimant-service.es/.well-known/tests-results-AAS"},
+            {"ex:standardsName": "OPCVA",
+              "ex:testBedResults": "https://claimant-service.es/.well-known/tests-results-OPCVA"},
+            {"ex:standardsName": "ISDA",
+              "ex:testBedResults": "https://claimant-service.es/.well-known/tests-results-ISDA"}
+        ]
+    },
+    "issuer": "did:web:tems-trial.es",
+    "id": "https://tems-trial.es/verifiableCredential/as1223asda12s121s2",
+    "evidence": [
+        {
+            "@context":["https://tems-trial.es/.well-known/sqsEvidenceContext.jsonld"],
+            "id": "https://tems-trial.es/auditCerts/as1223asda12s121s2",
+            "type": ["Evidence", "DocumentEvidence"],
+            "name": "Audit Certificate for service Claimant Service, from Claimant Company by SQS", 
+            "description": "This is an oficial certificate from SQS.",
+            "digestMultibase": "12203f786850e387550fdab836ed7e6dc881de23001b",
+            "ex:standardProved": [{
+                "ex:standardsName": "DSP"
+                },
+                {
+                "ex:standardsName": "AAS"
+                },
+                {
+                "ex:standardsName": "OPCVA"
+                },
+                {
+                "ex:standardsName": "ISDA"
+                }
+            ]
+        }
+    ],
+    "proof": {
+        "type": "JsonWebSignature2020",
+        "created": "2025-11-14T11:00:00Z",
+        "proofPurpose": "verificationMethod",
+        "verificationMethod": "did:web:tems-trial.es#key-verification",
+        "jws": ""    
+    }
+}

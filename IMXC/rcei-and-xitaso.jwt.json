@@ -1,0 +1,66 @@
+{
+  "signedComplianceCredentialJwt": "eyJhbGciOiJQUzI1NiIsImlzcyI6ImRpZDppbXg6c2hvd2Nhc2U6aG0yNjplbnRpdHk6eGl0YXNvIiwia2lkIjoiZGlkOmlteDpzaG93Y2FzZTpobTI2OmVudGl0eTp4aXRhc28jWDUwOS1KV0siLCJpYXQiOjE3NzU2NTk3NDM4MzYsImV4cCI6MTc4MzQzNTc0MzgzNiwiY3R5IjoidmMiLCJ0eXAiOiJ2Yytqd3QifQ.eyJAY29udGV4dCI6WyJodHRwczovL3d3dy53My5vcmcvbnMvY3JlZGVudGlhbHMvdjIiLCJodHRwczovL3czaWQub3JnL2dhaWEteC9kZXZlbG9wbWVudCMiXSwidHlwZSI6WyJWZXJpZmlhYmxlQ3JlZGVudGlhbCIsImlteDpQcm92aWRlckNyZWRlbnRpYWwiXSwiaWQiOiJodHRwcyUzQSUyRiUyRmdhaWEteC5ldSUyRi53ZWxsLWtub3duJTJGY29tcGxpYW5jZS1jcmVkZW50aWFsLmp3dCIsImlzc3VlciI6ImRpZDppbXg6c2hvd2Nhc2U6aG0yNjplbnRpdHk6eGl0YXNvIiwidmFsaWRGcm9tIjoiMjAyNi0wNC0wOFQxNDo0OTowMy44MzZaIiwidmFsaWRVbnRpbCI6IjIwMjYtMDctMDdUMTQ6NDk6MDMuODM2WiIsImNyZWRlbnRpYWxTdWJqZWN0Ijp7ImlkIjoiaHR0cHMlM0ElMkYlMkZnYWlhLXguZXUlMkYud2VsbC1rbm93biUyRmNvbXBsaWFuY2UtY3JlZGVudGlhbC5qd3QjY3MiLCJneDplbmdpbmVWZXJzaW9uIjoiMC4zLjAiLCJneDpjb21wbGlhbnRDcmVkZW50aWFscyI6W3sidHlwZSI6Imd4OkNvbXBsaWFuY2VFdmlkZW5jZSIsImd4OmRpZ2VzdFNSSSI6InNoYTI1Ni0zMDhiYjU2OWE3NTk2NmM2YTU3MmQ0YjNjMDVjMzgyZDIwY2Q2ZWI0MjE1ZDY2MGZjYWE4YWQ0NjI0OGRlNTI4IiwiaWQiOiJkaWQ6aW14OnNob3djYXNlOmhtMjY6ZW50aXR5OnJjZWktYW5kLXhpdGFzbzp2YzpQcm92aWRlckNyZWRlbnRpYWw6MDAxIiwiY3JlZGVudGlhbFN1YmplY3QiOnsiaWQiOiJkaWQ6aW14OnNob3djYXNlOmhtMjY6ZW50aXR5OnJjZWktYW5kLXhpdGFzbyIsInR5cGUiOiJpbXg6UGFydGljaXBhbnQiLCJzY2hlbWE6bmFtZSI6IlJDRUkgYW5kIFhJVEFTTyIsImd4OnJlZ2lzdHJhdGlvbk51bWJlciI6eyJ0eXBlIjoiZ3g6Q29tcGFueVJlZ2lzdHJhdGlvbiIsImd4OmNvdW50cnlDb21wYW55TnVtYmVyIjoiQ0ExMjM0NTY3ODkwIiwiZ3g6Y29tcGFueU51bWJlclF1YWxpZmllciI6IkNvbXBhbnlSZWdpc3RyeUNBIiwiZ3g6Y291bnRyeUNvZGUiOiJDQSJ9fX0seyJ0eXBlIjoiZ3g6Q29tcGxpYW5jZUV2aWRlbmNlIiwiZ3g6ZGlnZXN0U1JJIjoic2hhMjU2LTJiNmI4NTY3NjYyZWU0NjJjN2ZjYTViOThkM2NhMzg0ZTYxOGMzYmU0ZmJjNjIyNTVjOTk4YjMwNjU5YmQ0MmIiLCJpZCI6ImRpZDppbXg6c2hvd2Nhc2U6aG0yNjplbnRpdHk6cmNlaS1hbmQteGl0YXNvOnZjOlNlcnZpY2VDcmVkZW50aWFsOjAwMSIsImNyZWRlbnRpYWxTdWJqZWN0Ijp7ImlkIjoiZGlkOmlteDpzaG93Y2FzZTpobTI2OnJjZWktYW5kLXhpdGFzbzpkcHAtc2hvd2Nhc2UiLCJ0eXBlIjoiaW14OlNlcnZpY2UiLCJzY2hlbWE6bmFtZSI6IkRpZ2lmYWIgU2VydmljZSIsInNjaGVtYTpkZXNjcmlwdGlvbiI6IlJDRUkvTE5JIERQUCBTaG93Y2FzZSAtIEFBUy9TTS9DRCBSZXBvc2l0b3J5IiwiaW14Om9wZXJhdGVkQnkiOiJkaWQ6aW14OnNob3djYXNlOmhtMjY6ZW50aXR5OnJjZWktYW5kLXhpdGFzbyIsImlteDpzdXBwb3J0ZWRTdGFuZGFyZHMiOlsiaW14OkFBU1N0YW5kYXJkIl0sImlteDplbmRQb2ludCI6Imh0dHBzOi8vYXBpLmRwcC5kZW1vLmRpZ2lmYWJxZy5jYS9yZXBvIiwiaW14OnN1cHBvcnRlZFVzZUNhc2VzIjoiIn19LHsidHlwZSI6Imd4OkNvbXBsaWFuY2VFdmlkZW5jZSIsImd4OmRpZ2VzdFNSSSI6InNoYTI1Ni04YWUzMzE0Mjk3NDM1NWYyMWQwMzVhMWIyYzVjNzY3NWU5NzI3NzIyNjQ2YmY0MTA4MjNlZjE2NWIzN2NjZTg4IiwiaWQiOiJkaWQ6aW14OnNob3djYXNlOmhtMjY6ZW50aXR5OnJjZWktYW5kLXhpdGFzbzp2YzpBcHBsaWNhdGlvbkNyZWRlbnRpYWw6MDAxIiwiY3JlZGVudGlhbFN1YmplY3QiOnsiaWQiOiJkaWQ6aW14OnNob3djYXNlOmhtMjY6YXBwbGljYXRpb246ZGlnaWZhYl9zaG93Y2FzZSIsInR5cGUiOiJpbXg6QXBwbGljYXRpb24iLCJzY2hlbWE6bmFtZSI6IkRpZ2lmYWIgKEFwcGxpY2F0aW9uKSIsInNjaGVtYTpkZXNjcmlwdGlvbiI6Ikhhbm5vdmVyIEZhaXIgMjAyNSBTaG93Y2FzZSwgc2hvd2Nhc2luZyB0aGUgcG93ZXIgb2YgdGhlIERQUCBjcmVhdGVkIGJ5IFhJVEFTTyAmIHRoZSBSQ0VJIiwiaW14Om9wZXJhdGVkQnkiOiJkaWQ6aW14OnNob3djYXNlOmhtMjY6ZW50aXR5OnJjZWktYW5kLXhpdGFzbyIsImlteDpzdXBwb3J0ZWRTdGFuZGFyZHMiOlsiaW14OkFBU1N0YW5kYXJkIl0sImlteDplbmRQb2ludCI6Imh0dHBzOi8vZHBwLmRlbW8uZGlnaWZhYnFnLmNhL3ZpZXdlci9hSFIwY0hNNkx5OXNibWswTUM1a1pTOWhZWE12ZDFSWk5uRTUiLCJpbXg6c3VwcG9ydGVkVXNlQ2FzZXMiOltdfX1dfX0.cVSIEeTxm6B4KxG71Q03XxCupJV5RrKewn9DWHu1Nt9vfU1PUQjoNx7P4HIO5ar1p_UIdUQRskM8PtFN3oNo6TGtLEHr63zkQYiMfotXk7U1fLqzmRcgDCNtGN8x1vq5WCDVtHXULXQ2-d2lR4xXqDpxGlKtX1Zh5ewb_0bp7rqsa5qshe2MH8EBvVtBmnJ4boLVq392blDsd8lFqymT-xAfWe8V9QUeUW97qsaMV1MmntgnAAPjAltoBPCNKXcvuV7P6KsFvpwh0vMuwsm0OOMR03Hy-jpmLibvhQ9gWdvt1GMh0tXsKtvO8_7ZyrFdEv8b0-UQ2qlWTBC-L9ozzj2dZDQrIhdtYJlurdmK73S7_9DFJLTCQ0Oyll6CHKiB8scH5QY6Fs_qObSXUQLtIf4by5JddKcTahT86dXybijWnicyN2kaVK3k9jP1dCTQaWKz45lnQITebdpuqE143INEFnn7iab6-7ZNJhpuCkHU0v-rMC85oOTj1ouwRDYZHcbfVYrMUDW1Q75vKFpwserdKmwvgOv3Zh4IEtkw6je_lAgIyzBKm-g-0_wJlRNBTopQL7yqS0BwQ9lju26Z3XP5BHHYxrox-5EDVQ065Sf71tJ1p8dD0C6SCYSj2mGP-pwLNUhXzvU7qPFQpfju9ItHs-1D3Ba1qLYVVBOacUE",
+  "decodedPayload": {
+    "@context": [
+      "https://www.w3.org/ns/credentials/v2",
+      "https://w3id.org/gaia-x/development#"
+    ],
+    "type": ["VerifiableCredential", "imx:ProviderCredential"],
+    "id": "https%3A%2F%2Fgaia-x.eu%2F.well-known%2Fcompliance-credential.jwt",
+    "issuer": "did:imx:showcase:hm26:entity:xitaso",
+    "validFrom": "2026-04-08T14:49:03.836Z",
+    "validUntil": "2026-07-07T14:49:03.836Z",
+    "credentialSubject": {
+      "id": "https%3A%2F%2Fgaia-x.eu%2F.well-known%2Fcompliance-credential.jwt#cs",
+      "gx:engineVersion": "0.3.0",
+      "gx:compliantCredentials": [
+        {
+          "type": "gx:ComplianceEvidence",
+          "gx:digestSRI": "sha256-308bb569a75966c6a572d4b3c05c382d20cd6eb4215d660fcaa8ad46248de528",
+          "id": "did:imx:showcase:hm26:entity:rcei-and-xitaso:vc:ProviderCredential:001",
+          "credentialSubject": {
+            "id": "did:imx:showcase:hm26:entity:rcei-and-xitaso",
+            "type": "imx:Participant",
+            "schema:name": "RCEI and XITASO",
+            "gx:registrationNumber": {
+              "type": "gx:CompanyRegistration",
+              "gx:countryCompanyNumber": "CA1234567890",
+              "gx:companyNumberQualifier": "CompanyRegistryCA",
+              "gx:countryCode": "CA"
+            }
+          }
+        },
+        {
+          "type": "gx:ComplianceEvidence",
+          "gx:digestSRI": "sha256-2b6b8567662ee462c7fca5b98d3ca384e618c3be4fbc62255c998b30659bd42b",
+          "id": "did:imx:showcase:hm26:entity:rcei-and-xitaso:vc:ServiceCredential:001",
+          "credentialSubject": {
+            "id": "did:imx:showcase:hm26:rcei-and-xitaso:dpp-showcase",
+            "type": "imx:Service",
+            "schema:name": "Digifab Service",
+            "schema:description": "RCEI/LNI DPP Showcase - AAS/SM/CD Repository",
+            "imx:operatedBy": "did:imx:showcase:hm26:entity:rcei-and-xitaso",
+            "imx:supportedStandards": ["imx:AASStandard"],
+            "imx:endPoint": "https://api.dpp.demo.digifabqg.ca/repo",
+            "imx:supportedUseCases": ""
+          }
+        },
+        {
+          "type": "gx:ComplianceEvidence",
+          "gx:digestSRI": "sha256-8ae33142974355f21d035a1b2c5c7675e9727722646bf410823ef165b37cce88",
+          "id": "did:imx:showcase:hm26:entity:rcei-and-xitaso:vc:ApplicationCredential:001",
+          "credentialSubject": {
+            "id": "did:imx:showcase:hm26:application:digifab_showcase",
+            "type": "imx:Application",
+            "schema:name": "Digifab (Application)",
+            "schema:description": "Hannover Fair 2025 Showcase, showcasing the power of the DPP created by XITASO & the RCEI",
+            "imx:operatedBy": "did:imx:showcase:hm26:entity:rcei-and-xitaso",
+            "imx:supportedStandards": ["imx:AASStandard"],
+            "imx:endPoint": "https://dpp.demo.digifabqg.ca/viewer/aHR0cHM6Ly9sbmk0MC5kZS9hYXMvd1RZNnE5",
+            "imx:supportedUseCases": []
+          }
+        }
+      ]
+    }
+  }
+}

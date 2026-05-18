@@ -1,0 +1,32 @@
+{
+    "@context": [
+        "https://www.w3.org/ns/credentials/v2",
+        "https://w3id.org/gaia-x/development#",
+        {
+            "imx": "http://w3id.org/imx",
+            "schema": "https://schema.org/"
+        }
+    ],
+    "id": "https://trust.imx.explitia.com/.well-known/imx-app-portal.json",
+    "type": [
+        "VerifiableCredential",
+        "imx:ApplicationCredential"
+    ],
+    "issuer": "did:web:trust.imx.explitia.com",
+    "validFrom": "2026-04-16T09:29:18.160+00:00",
+    "validUntil": "2026-07-15T09:29:18.160+00:00",
+    "credentialSubject": {
+        "id": "did:imx:showcase:hm26:application:ExplitiaPortal",
+        "schema:name": "Explitia Production Portal",
+        "schema:description": "Battery production simulation and visualization portal",
+        "imx:operatedBy": "did:imx:showcase:hm26:entity:explitia",
+        "imx:supportedStandards": [
+            "imx:AASStandard"
+        ],
+        "imx:endPoint": "https://portal.imx.explitia.com",
+        "imx:endPointCountry": "PL",
+        "imx:supportedUseCases": [
+            "imx:BatteryPassportUseCase"
+        ]
+    }
+}
