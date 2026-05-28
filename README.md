@@ -10,7 +10,7 @@ An interactive catalog that lets you browse and search Gaia-X verifiable credent
 
 ### Home Page
 
-![Home Page](app-screenshot.png)
+![Home Page](screenshots/app-screenshot.png)
 
 The home page is split into four rows. Each row has a small icon and label on the left side and a grid of clickable tiles on the right.
 
@@ -25,7 +25,7 @@ The home page is split into four rows. Each row has a small icon and label on th
 
 ### Credential Catalog (`/catalog`)
 
-![Credential Catalog](screenshot-catalog.png)
+![Credential Catalog](screenshots/screenshot-catalog.png)
 
 This is the main credential browser. Here is what each element does:
 
@@ -61,7 +61,7 @@ This is the main credential browser. Here is what each element does:
 
 ### Credential Detail View
 
-![Credential Detail](screenshot-detail.png)
+![Credential Detail](screenshots/screenshot-detail.png)
 
 When you click a credential card, you land here. Everything from the list view is shown in a larger layout, plus:
 
@@ -77,7 +77,7 @@ When you click a credential card, you land here. Everything from the list view i
 
 ### Trusted Services & Devices Catalog (`/vc-catalog`)
 
-![VC Catalog](screenshot-vc-catalog.png)
+![VC Catalog](screenshots/screenshot-vc-catalog.png)
 
 A table view of the same credentials. This view is useful when you want to quickly scan many entries at once.
 
