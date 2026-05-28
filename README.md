@@ -1,106 +1,252 @@
 # IMX Federated Catalog Page
 
-Interactive credential catalog for the LNI 4.0 / Gaia-X ecosystem, built with Next.js 16. The application surfaces verifiable credential metadata, lets users search and filter by type and status, and provides helpful catalog insights for dataspace participants.
+![HM26 Showcase](public/hm26-showcase-logowall.png)
 
-## Features
+An interactive catalog that lets you browse and search Gaia-X verifiable credentials from the International Manufacturing-X (IMX) initiative. You can filter by credential type, use case, and status, copy credential JSON with one click, and jump into detailed views for each entry.
 
-- Credential explorer with search, type, and status filters
-- Responsive UI backed by Tailwind CSS and shadcn-inspired components
-- Clipboard copy helpers for credential IDs and references
-- Analytics instrumentation via Vercel Analytics
-- Linting (ESLint flat config) and testing (Vitest + Testing Library) baked in
-- Dockerfile optimized for reproducible `npm ci` installs
+---
 
-## Tech Stack
+## What does this app look like?
 
-- Next.js 16 (App Router) + React 19
-- TypeScript with strict settings
-- Tailwind CSS 4, class-variance-authority, and shadcn/ui primitives
-- Vitest, Testing Library, jsdom for unit and component testing
-- Semantic Release for automated versioning and changelog generation
+![Home Screen](public/home.png)
 
-## Getting Started
+The home page gives you a visual overview of IMX topics and use cases. Clicking any tile navigates to a topic detail page or opens the catalog filtered for that use case.
 
-Prerequisites:
+The **Credential Catalog** (`/catalog`) shows every credential as a card with issuer, validity dates, and status. Click a card to see the full raw JSON.
 
-- Node.js 22.x
-- npm 10.x (ships with Node 22)
+The **Trusted Services & Devices Catalog** (`/vc-catalog`) presents the same data as a sortable table with country flags and endpoint links.
 
-Install dependencies:
+---
+
+## First-time setup — step by step
+
+> **Never used a terminal before?**
+> A terminal (also called "command line" or "shell") is a text-based window where you type commands. On **Mac** press `Cmd + Space`, type `Terminal`, and hit Enter. On **Windows** press the Windows key, type `cmd`, and hit Enter.
+
+---
+
+### Step 1 — Install Node.js
+
+Node.js is the engine that runs this app. Think of it like installing a game runtime before you can play the game.
+
+1. Go to **https://nodejs.org**
+2. Download the version labelled **"LTS"** (Long-Term Support) — this is the stable one
+3. Run the installer and click **Next** on every screen (the defaults are fine)
+4. When the installer finishes, open a terminal and type the following, then press Enter:
+
+```
+node --version
+```
+
+You should see something like `v22.x.x`. If you do, Node.js is installed correctly. If you see an error, restart your computer and try again.
+
+---
+
+### Step 2 — Download the project
+
+**Option A — with Git (recommended)**
+
+If you have Git installed, open a terminal and run:
+
+```bash
+git clone https://github.com/orbiter-dataspaces/imx-federated-catalog-page-public.git
+cd imx-federated-catalog-page-public
+```
+
+**Option B — without Git**
+
+1. Go to the GitHub page for this project
+2. Click the green **"Code"** button near the top right
+3. Click **"Download ZIP"**
+4. Unzip the downloaded file somewhere on your computer (e.g. your Desktop)
+5. Open a terminal and navigate to that folder:
+
+```bash
+# On Mac/Linux:
+cd ~/Desktop/imx-federated-catalog-page-public
+
+# On Windows (adjust the path to wherever you unzipped it):
+cd C:\Users\YourName\Desktop\imx-federated-catalog-page-public
+```
+
+---
+
+### Step 3 — Install the app's dependencies
+
+Dependencies are small helper packages the app needs to run (like plugins). This step downloads all of them automatically.
+
+In your terminal (make sure you are inside the project folder from Step 2), run:
 
 ```bash
 npm ci
 ```
 
-Start the development server:
+You will see a lot of text scroll by — that is normal. It can take 1–2 minutes depending on your internet connection. When it finishes, your terminal prompt will appear again.
+
+> **If you see "npm: command not found"** — Node.js did not install correctly. Go back to Step 1 and try reinstalling it.
+
+---
+
+### Step 4 — Start the app
 
 ```bash
 npm run dev
-# App will be available at http://localhost:3000
 ```
 
-Create a production build and serve it locally:
+After a few seconds you will see output like this:
+
+```
+▲ Next.js 16.x.x
+- Local:        http://localhost:3000
+- Network:      http://192.168.x.x:3000
+
+✓ Ready in 2.1s
+```
+
+Open your web browser (Chrome, Firefox, Edge — any of them) and go to:
+
+```
+http://localhost:3000
+```
+
+The app is now running on your computer. You should see the IMX catalog home page.
+
+> **To stop the app**, go back to the terminal and press `Ctrl + C`.
+
+---
+
+### Step 5 — Use the app
+
+| What you want to do | How |
+|---|---|
+| Browse all credentials | Click **Credential Catalog** on the home page (or go to `/catalog`) |
+| Filter by use case | Use the **Use Case** dropdown on the catalog page |
+| Filter by type (Participant, Application, Service) | Use the **Type** dropdown |
+| See full credential details | Click any credential card |
+| Copy credential JSON | Click the **Copy JSON** button on any card or in the detail view |
+| Go back to the home page | Click **Back to Catalog** or use your browser's back button |
+
+---
+
+## Common problems & fixes
+
+**The page won't load / I see "This site can't be reached"**
+
+Make sure the terminal is still running `npm run dev`. If you closed it, run `npm run dev` again.
+
+---
+
+**I see a long error after running `npm ci`**
+
+Your Node.js version may be too old. Check it:
+
+```bash
+node --version
+```
+
+If it shows anything below `v18`, reinstall Node.js from https://nodejs.org (download the LTS version).
+
+---
+
+**The terminal says "Permission denied"**
+
+On Mac/Linux, add `sudo` in front of the command and enter your password when asked:
+
+```bash
+sudo npm ci
+```
+
+---
+
+**The app opens but shows no credentials**
+
+Make sure the `IMXC/` folder exists inside the project directory and contains `.json` files. If you downloaded the ZIP from GitHub, these files should already be included.
+
+---
+
+## Run a production build (optional)
+
+If you want to run the app the same way it would run on a live server (faster, no debug output):
 
 ```bash
 npm run build
 npm run start
 ```
 
-## Available Scripts
+Then open `http://localhost:3000` as before.
 
-- `npm run dev` – Run the Next.js development server
-- `npm run build` – Generate a production build
-- `npm run start` – Serve the production build
-- `npm run lint` – Run ESLint with the project flat config
-- `npm run test` – Execute Vitest in run mode (jsdom environment)
+---
 
-## Testing & Linting
+## Run with Docker (optional)
 
-The project uses a flat ESLint setup with TypeScript, React, Next.js, hooks, and accessibility rules. Tests are powered by Vitest with Testing Library helpers. Both commands run in CI and should pass before committing changes:
-
-```bash
-npm run lint
-npm run test
-```
-
-## Docker
-
-The `Dockerfile` produces a standalone Next.js build and uses `npm ci` for deterministic installs. Build and run the container locally with:
+If you have Docker installed, you can skip Node.js entirely and run the whole app inside a container:
 
 ```bash
 docker build -t imx-federated-catalog .
 docker run -p 3000:3000 imx-federated-catalog
 ```
 
-## Continuous Integration & Delivery
+Then open `http://localhost:3000`.
 
-- `CI` workflow (`.github/workflows/ci.yml`) runs on every pull request, executing `npm run lint` and `npm run test`.
-- `Release` workflow (`.github/workflows/release.yml`) runs on pushes to `main` (or manually) to execute Semantic Release, publish GitHub releases, and build/push Docker images to GHCR tagged with the release version and `latest`.
+> **What is Docker?** Docker packages the app and all its requirements into a self-contained box that runs the same on any computer. Download it from https://www.docker.com/products/docker-desktop.
 
-## Versioning & Releases
+---
 
-Semantic Release enforces versioning through conventional commit messages. Use the conventional/semantic release prefixes (e.g., `feat:`, `fix:`, `chore:`, `ci:`) so automatic version calculation, changelog generation, and release publishing work correctly.
+## For developers
 
-## Project Structure
+### Available scripts
+
+| Command | What it does |
+|---|---|
+| `npm run dev` | Start the development server with hot reload |
+| `npm run build` | Compile a production build |
+| `npm run start` | Serve the production build |
+| `npm run lint` | Run ESLint to check code quality |
+| `npm run test` | Run the Vitest test suite |
+
+### Project structure
 
 ```
-app/                 # Next.js App Router pages and layouts
-components/          # Reusable UI components (shadcn-based)
-lib/                 # Shared utilities (e.g., class name helpers)
-public/              # Static assets
-styles/              # Global Tailwind styles
-.github/workflows/   # CI and release automation
+app/                  Next.js App Router — pages and layouts
+  api/credentials/    API route that reads and normalises IMXC/*.json files
+  catalog/            Card-based credential explorer
+  vc-catalog/         Table-based credential catalog with country flags
+  topic/[slug]/       Dynamic topic pages driven by lib/topics.ts
+components/           Reusable UI components (shadcn/ui based)
+lib/
+  topics.ts           Topic metadata (slugs, slide ranges, extra images)
+  utils.ts            Tailwind class-merge helper
+IMXC/                 Verifiable Credential JSON files (the actual data)
+credentials/          Additional credential files
+public/               Static assets (images, icons, slide PNGs)
+styles/               Global Tailwind CSS
+workflows/            CI and release GitHub Actions
 ```
 
-## Contributing
+### Tech stack
+
+- **Next.js 16** (App Router) + **React 19**
+- **TypeScript** with strict mode
+- **Tailwind CSS 4** + shadcn/ui primitives
+- **Vitest** + Testing Library for tests
+- **Semantic Release** for automated versioning
+
+### Contributing
 
 1. Fork the repository and create a feature branch
-2. Install dependencies with `npm ci`
-3. Implement your changes and add/adjust tests
-4. Ensure `npm run lint` and `npm run test` pass
-5. Follow semantic-release commit message conventions when committing
-6. Open a pull request against `develop`
+2. Run `npm ci` to install dependencies
+3. Make your changes and add or update tests as needed
+4. Ensure `npm run lint` and `npm run test` both pass
+5. Use semantic-release commit prefixes (`feat:`, `fix:`, `chore:`) in your commit messages
+6. Open a pull request against `master`
+
+### CI / CD
+
+- **CI workflow** — runs lint and tests on every pull request
+- **Release workflow** — triggered on push to `master`; runs Semantic Release, publishes a GitHub release, and builds + pushes a Docker image to GHCR
+
+---
 
 ## License
 
-This project is maintained by the Orbiter Dataspaces team. Licensing terms are TBD; please contact the maintainers for clarification before redistribution.
+Maintained by the Orbiter Dataspaces team. Licensing terms are TBD — contact the maintainers before redistribution.
