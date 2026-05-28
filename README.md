@@ -23,58 +23,6 @@ The home page is split into four rows. Each row has a small icon and label on th
 
 ---
 
-### Credential Catalog (`/catalog`)
-
-![Credential Catalog](screenshots/screenshot-catalog.png)
-
-This is the main credential browser. Here is what each element does:
-
-**Search bar** — Type anything here (a company name, a DID, a credential type) and the list below updates instantly. It searches across the credential ID, issuer name, subject ID, and credential type at the same time.
-
-**Use Case dropdown** — Narrows the list to credentials belonging to a specific use case:
-- *All* — show everything
-- *Digital Battery Passport* — only battery-related credentials
-- *Ski Maintenance* — only ski maintenance credentials
-
-**Type dropdown** — Filter by what kind of credential it is:
-- *Participant* — an organisation that is a member of the dataspace
-- *Application* — a software application registered in the dataspace
-- *Service* — a service endpoint registered in the dataspace
-
-**Status dropdown** — Filter by validity:
-- *Active* — credential is currently valid
-- *Expiring Soon* — valid but expires within the next 30 days
-- *Unknown* — no validity date information available
-
-**Credential cards** — Each card shows one credential. The information on a card:
-- **Name / title** — the subject's name from `schema:name`, or the credential type if no name is found
-- **Subject** — the DID (decentralised identifier) of the entity the credential describes
-- **Badge (unknown / active / expiring soon)** — the validity status at a glance
-- **Issuer DID** — the organisation that issued and signed this credential
-- **Valid From / Valid Until** — the date range during which the credential is valid. "No expiration" means no end date was set.
-- **Copy JSON button** — copies the full raw credential JSON to your clipboard so you can paste it anywhere
-- **External link icon** — opens the credential's own URL in a new tab (only works if the credential has a resolvable URL as its ID)
-
-> **Clicking anywhere on a card** (not just the buttons) opens the full credential detail view.
-
----
-
-### Credential Detail View
-
-![Credential Detail](screenshots/screenshot-detail.png)
-
-When you click a credential card, you land here. Everything from the list view is shown in a larger layout, plus:
-
-- **Back to Catalog button** (top left arrow) — returns you to the credential list, keeping any filters you had active
-- **Issuer** — shown in the subtitle below the page title
-- **Subject block** — the name and DID of the entity the credential describes, with the status badge and full credential ID
-- **Issuer DID / Valid From / Valid Until** — three columns of metadata shown below the subject block
-- **Raw Credential JSON panel** — the complete JSON of the credential, exactly as it was issued. You can scroll through it here.
-  - **Copy JSON button** — copies the entire JSON to your clipboard
-  - **External link icon** — opens the credential's source URL in a new tab
-
----
-
 ### Trusted Services & Devices Catalog (`/vc-catalog`)
 
 ![VC Catalog](screenshots/screenshot-vc-catalog.png)
