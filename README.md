@@ -46,6 +46,137 @@ A table view of the same credentials. This view is useful when you want to quick
 
 ---
 
+## Server deployment recipe (for IT / ops)
+
+If you want to host this app on a virtual server so colleagues can reach it through a URL, here is the complete recipe — minimum specs, operating system, tools, and step-by-step install from GitHub.
+
+### Minimum hardware
+
+| Resource | Minimum | Recommended | Notes |
+|---|---|---|---|
+| **CPU** | 1 vCPU | 2 vCPU | Next.js uses one core well; a second core gives build headroom |
+| **RAM** | 1 GB (+ swap) | 2 GB | `npm install` and `next build` can briefly spike to ~1 GB |
+| **Disk** | 2 GB free | 5 GB free | Project + `node_modules` + build output ≈ 700 MB; the rest is OS + logs |
+| **Network** | Outbound HTTPS (to pull from GitHub + npm) and inbound TCP **3000** (or 80/443 if you use a reverse proxy) |
+
+Cloud sizes that fit this profile:
+
+| Provider | Suitable instance | Approx. price |
+|---|---|---|
+| Hetzner Cloud | **CX22** (2 vCPU / 4 GB) | ~€4/month |
+| AWS EC2 | **t3.micro** (2 vCPU / 1 GB) | ~$8/month |
+| Azure | **B1s** (1 vCPU / 1 GB) | ~$8/month |
+| DigitalOcean | **Basic Droplet** (1 vCPU / 1 GB) | $6/month |
+
+### Operating system
+
+Any modern 64-bit Linux. Recommended (in order of preference):
+
+1. **Ubuntu 24.04 LTS** or **22.04 LTS** ← the recipe below assumes this
+2. **Debian 12**
+3. **Rocky Linux 9** / **RHEL 9** (swap `apt` for `dnf`)
+
+Windows Server and macOS also work but are not the typical hosting target.
+
+### Required tools
+
+| Tool | Minimum version | Purpose |
+|---|---|---|
+| **Node.js** | 18.x (22.x LTS recommended) | Runtime for the Next.js app |
+| **npm** | 9.x (ships with Node.js) | Installs JavaScript dependencies |
+| **git** | any recent version | Pulls the source code from GitHub |
+| **PM2** *(optional)* | latest | Keeps the app running after you log out |
+| **Caddy** or **nginx** *(optional)* | latest | Reverse proxy + automatic HTTPS |
+| **Docker** *(optional)* | 20.10+ | Run the app in a container instead of installing Node.js |
+
+### Step-by-step — fresh Ubuntu 22.04 / 24.04 VM
+
+Log in via SSH as a user with `sudo` rights and run these commands in order:
+
+```bash
+# 1. Update the operating system
+sudo apt update && sudo apt upgrade -y
+
+# 2. Install git and curl
+sudo apt install -y git curl
+
+# 3. Install Node.js 22 LTS from the official NodeSource repository
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+sudo apt install -y nodejs
+
+# 4. Verify the install
+node --version     # expect v22.x.x
+npm --version      # expect 10.x.x or higher
+
+# 5. Pull the project from GitHub
+git clone https://github.com/orbiter-dataspaces/imx-federated-catalog-page-public.git
+cd imx-federated-catalog-page-public
+
+# 6. Install JavaScript dependencies (~1–2 minutes)
+npm install
+
+# 7. Build the production bundle
+npm run build
+
+# 8. Start the app on port 3000
+npm run start
+```
+
+Open `http://<your-server-ip>:3000` in a browser — the app is live.
+
+> If your cloud provider has a firewall (AWS Security Group, Hetzner Firewall, etc.), open port **3000** for inbound TCP, or open **80/443** if you plan to use the reverse-proxy step below.
+
+### Keep it running after you log out
+
+`npm run start` stops as soon as you close the SSH session. Use **PM2** to keep it alive:
+
+```bash
+sudo npm install -g pm2
+pm2 start "npm run start" --name imx-catalog
+pm2 save
+pm2 startup        # follow the printed command to enable auto-start on reboot
+```
+
+### Put it on port 80/443 with HTTPS (recommended for public use)
+
+**Caddy** gives you free Let's Encrypt HTTPS in three lines:
+
+```bash
+sudo apt install -y caddy
+echo "yourdomain.example.com {
+    reverse_proxy localhost:3000
+}" | sudo tee /etc/caddy/Caddyfile
+sudo systemctl reload caddy
+```
+
+Point your domain's DNS A record at the server's public IP — Caddy will issue and renew the certificate automatically.
+
+### Docker alternative (no Node.js on the host)
+
+If you prefer to avoid installing Node.js on the server, the repository ships a production Dockerfile:
+
+```bash
+sudo apt install -y docker.io git
+git clone https://github.com/orbiter-dataspaces/imx-federated-catalog-page-public.git
+cd imx-federated-catalog-page-public
+sudo docker build -t imx-federated-catalog .
+sudo docker run -d --name imx-catalog --restart unless-stopped -p 3000:3000 imx-federated-catalog
+```
+
+Pre-built images are also published automatically to GitHub Container Registry on every release.
+
+### Updating to a new version
+
+```bash
+cd imx-federated-catalog-page-public
+git pull
+npm install
+npm run build
+pm2 restart imx-catalog       # or: sudo docker compose up -d --build
+```
+
+---
+
 ## First-time setup — step by step
 
 > **Never used a terminal before?**
